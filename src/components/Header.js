@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GoogleAuth from './GoogleAuth';
 
 export default function Header() {
 	return (
@@ -10,8 +9,6 @@ export default function Header() {
 			</div>
 
 			<ul className='nav-items'>
-				<GoogleAuth />
-
 				<li className='nav-item'>
 					<Link to='/home'>Home</Link>
 				</li>

@@ -83,7 +83,6 @@ class Home extends React.Component {
 const mapStateToProps = state => {
 	return {
 		apod: Object.values(state.apod),
-		isSignedIn: state.auth.isSignedIn,
 	};
 };
 

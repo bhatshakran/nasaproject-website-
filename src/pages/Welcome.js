@@ -4,7 +4,6 @@ import welback from '../images/welcome.jpg';
 import planet from '../images/planet.png';
 import rocket from '../images/rocket.png';
 import { motion } from 'framer-motion';
-import GoogleAuth from '../components/GoogleAuth';
 
 const Welcome = () => {
 	return (
@@ -24,7 +23,6 @@ const Welcome = () => {
 				}}>
 				<h2>Welcome to Nasa-X</h2>
 				<p>Get the latest space exploration, innovation and astronomy news</p>
-				<GoogleAuth />
 			</motion.div>
 		</div>
 	);

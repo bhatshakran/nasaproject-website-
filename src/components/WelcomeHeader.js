@@ -1,24 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux';
+
 import { Link } from 'react-router-dom';
 
 class WelcomeHeader extends React.Component {
 	render() {
-		if (this.props.isSignedIn) {
-			return (
-				<div className='wcm-hdr'>
-					<Link to='/home'>Back Home</Link>
-				</div>
-			);
-		}
-		return null;
+		return (
+			<div className='wcm-hdr'>
+				<Link to='/home'>To Home</Link>
+			</div>
+		);
 	}
 }
 
-const mapStateToProps = state => {
-	return {
-		isSignedIn: state.auth.isSignedIn,
-	};
-};
-
-export default connect(mapStateToProps)(WelcomeHeader);
+export default WelcomeHeader;
