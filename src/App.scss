@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#root {
+	position: relative;
+}
+button {
+	font-family: 'Open Sans';
+	font-size: 1rem;
+}
+.welcome-page {
+	max-width: 100%;
+	height: 100vh;
+	text-align: center;
+}
+
+.welcome-page .back-pic {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+
+.planet-pic {
+	width: 300px;
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	text-align: center;
+	animation: globe 25s infinite linear;
+}
+@keyframes globe {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+.rocket-pic {
+	position: absolute;
+	top: 1%;
+	left: 0%;
+	width: 80px;
+	opacity: 0;
+	filter: saturate(2);
+	animation: pulse 4.4s linear;
+}
+
+@keyframes pulse {
+	from {
+		position: absolute;
+		top: 90%;
+		left: -20%;
+	}
+	to {
+		left: 90%;
+		opacity: 1;
+	}
+}
+.home {
+	background: white;
+}
+.text {
+	position: absolute;
+	top: 100px;
+	margin: 0 auto;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 4rem;
+	letter-spacing: 7px;
+}
+
+.text p {
+	font-size: 1rem;
+}
+
+.navbar {
+	position: absolute;
+	bottom: 0%;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background: none;
+}
+
+.btn-login {
+	position: relative;
+	color: black;
+	margin: 0.7rem;
+	outline: none;
+	padding: 0.8rem;
+	cursor: pointer;
+	transition: all 0.1s linear;
+	opacity: 0.8;
+	border: none;
+	background: #faf5f5;
+	letter-spacing: 2px;
+	font-size: 1rem;
+	border-radius: 8px;
+}
+.btn-login:hover {
+	background: rgb(87, 180, 235);
+	color: white;
+}
+/* container */
+
+.container {
+	max-width: 1800px;
+}
+
+/* navtop */
+
+.nav-top {
+	height: 100px;
+	padding: 1rem;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-brand {
+	color: rgb(8, 8, 114);
+	letter-spacing: 8px;
+	font-size: 2rem;
+}
+
+.nav-items {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-item {
+	list-style-type: none;
+	color: black;
+	margin: 0.7rem;
+	padding: 0.9rem;
+	cursor: pointer;
+	transition: all 0.1s linear;
+	opacity: 0.8;
+}
+
+.nav-item a {
+	color: black;
+	text-decoration: none;
+	transition: all 0.1s linear;
+	letter-spacing: 2px;
+}
+
+.nav-item:hover {
+	border-bottom: 3px solid rgb(8, 8, 114);
+	opacity: 1;
+}
+
+@media screen and(max-width:900px) {
+	.nav-top {
+		height: auto;
+
+		flex-direction: column;
+	}
+	.nav-brand {
+		font-size: 1.7rem;
+	}
+	.nav-items {
+		flex-direction: column;
+		text-align: center;
+	}
+	.nav-item {
+		padding: 4px;
+		margin: 3px;
+	}
+	.btn-login {
+		font-size: 1rem;
+		letter-spacing: 0;
+		padding: 20px;
+		display: inline-block;
+	}
+}
+
+// apod img
+
+.apod-img {
+	width: 100%;
+	height: 600px;
+}
+
+// .wcm-hdr
+
+.wcm-hdr {
+	height: 50px;
+	background: black;
+	width: 100%;
+	position: relative;
+}
+
+.wcm-hdr a {
+	color: white;
+	text-decoration: none;
+	background: rgb(16, 41, 88);
+	position: absolute;
+	padding: 0.6rem;
+	margin: 1rem;
+	right: 10px;
+}
+
+//  services
+.services-tag {
+	margin: 0 auto;
+	// margin: 2rem;
+	text-align: center;
+	letter-spacing: 4px;
+	font-size: 2.5rem;
+	padding: 2rem;
+	max-width: 400px;
+	margin-top: 2rem;
+	border-bottom: 4px solid rgb(8, 8, 114);
+}
+.services {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 1rem;
+	margin: 5rem 2rem;
+
+	background: linear-gradient(to right, #000000, #434343);
+	color: white;
+}
+
+.service-item {
+	padding: 1rem;
+}
+
+.service-item > .icon {
+	font-size: 4rem;
+	margin: 2rem;
+}
+
+.service-item p {
+	font-size: 1rem;
+}
+
+// form
+.img-holder {
+	max-width: 1100px;
+	padding: 1rem 2rem;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 2rem;
+}
+form {
+	width: 100%;
+}
+
+.form-control {
+	width: 95%;
+	height: 40px;
+	margin: 1rem;
+	outline: none;
+}
+
+.images-grid {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: grid;
+
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 0 20px;
+	justify-content: center;
+	grid-auto-rows: 10px;
+	padding: 1rem;
+	text-align: center;
+}
+.images-grid h1 {
+	margin: 3rem;
+}
+.images-grid img {
+	width: 250px;
+	cursor: pointer;
+}
+
+.loaded-imgs {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.loaded-imgs img {
+	height: 250px;
+	width: 250px;
+	margin: 1rem;
+}
+
+.clr-btn {
+	border: none;
+	cursor: pointer;
+	transition: all 0.2 linear;
+}
+
+.clr-btn:hover {
+	background: rgb(77, 64, 64);
+	color: white;
+}
+
+.home-btn {
+	padding: 0.8rem;
+	background: rgb(0, 153, 255);
+	margin: 1rem;
+	height: 50px;
+	text-align: center;
+	max-width: 100px;
+	cursor: pointer;
+}
+
+.home-btn a {
+	color: white;
+	text-decoration: none;
+}
+
+// posts
+.post-holder,
+.album-holder {
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.post-holder {
+	max-width: 1100px;
+}
+.post-holder h1 {
+	padding: 1rem;
+	margin: 0 auto;
+	border-bottom: 3px solid rgb(24, 114, 187);
+	max-width: 300px;
+}
+.post,
+.album {
+	color: black;
+	margin: 2rem;
+	padding: 1rem;
+	text-align: center;
+	border: 2px solid #ececec;
+	position: relative;
+	background: white;
+}
+
+.post h3 {
+	border-bottom: 1px solid #757373;
+	margin-bottom: 1rem;
+	padding: 0.3rem;
+}
+
+.post-icon {
+	cursor: pointer;
+	font-size: 1rem;
+	max-width: 40px;
+}
+
+.post p {
+	padding: 1rem;
+	font-size: 1.2rem;
+	color: #2d73b4;
+}
+
+.album-holder {
+	background: linear-gradient(to right, #ba5370, #f4e2d8);
+}
+.album-holder h1 {
+	color: rgba(255, 255, 255, 0.849);
+}
+.album {
+	background: rgba(255, 255, 255, 0.74);
+	color: black;
+}
+
+.view-alb {
+	padding: 0.6rem;
+	margin: 1rem;
+	border: 1px solid #ececec;
+	cursor: pointer;
+	outline: none;
+}
+
+.view-alb:hover {
+	background: black;
+	color: white;
+}
+
+.projects {
+	display: grid;
+	margin: 3rem;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	background: linear-gradient(to bottom, #55a6b3, #c4e0e5);
+}
+
+.project-item {
+	padding: 1rem;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.719);
+}
+
+.project-item h3 {
+	font-size: 2rem;
+	color: white;
+}
